@@ -1,0 +1,3 @@
+DS_25AM,Batman,Ubisoft Historicalfiction|Stealth|Action|Adventure,1,$98.80,8
+DS_266B,ToyStory,U,Historicalfiction|Stealth|Action|Adventure,0,$98.80,5
+DS_9066B,NBA,Add,Adventure,1,$9.80,2

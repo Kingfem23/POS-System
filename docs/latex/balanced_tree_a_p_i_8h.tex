@@ -1,0 +1,229 @@
+\hypertarget{balanced_tree_a_p_i_8h}{}\section{include/balanced\+Tree\+A\+PI.h File Reference}
+\label{balanced_tree_a_p_i_8h}\index{include/balanced\+Tree\+A\+P\+I.\+h@{include/balanced\+Tree\+A\+P\+I.\+h}}
+
+
+File containing the functions that communicate with a self-\/balancing binary tree.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}tree.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$ \hyperlink{balanced_tree_a_p_i_8h_a54002b7e96754979d94eb4f3c5750328}{create\+Balanced\+Bin\+Tree} (int($\ast$compare\+FP)(void $\ast$data1, void $\ast$data2), void($\ast$destroy\+FP)(void $\ast$to\+Be\+Deleted), void $\ast$($\ast$copy\+FP)(void $\ast$to\+Be\+Copy))
+\item 
+\hyperlink{struct_balanced_bin_tree_node}{Tree\+Node} $\ast$ \hyperlink{balanced_tree_a_p_i_8h_a59969ddb13215584df2a0df9816b5dbb}{create\+Balanced\+Bin\+Node} (void $\ast$\hyperlink{structdata}{data})
+\item 
+void \hyperlink{balanced_tree_a_p_i_8h_a9a025a7c00f1f53f29b6184c25fb998d}{destroy\+Balanced\+Bin\+Tree} (\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$to\+Be\+Deleted)
+\item 
+void \hyperlink{balanced_tree_a_p_i_8h_a8c90b112e2f12ffb017e386f92b69ac3}{tree\+Insert\+Node} (\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$the\+Tree, void $\ast$to\+Be\+Inserted)
+\item 
+void \hyperlink{balanced_tree_a_p_i_8h_ab764e3af4d144b174b5db3adfe63a2c9}{tree\+Delete\+Node} (\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$the\+Tree, void $\ast$to\+Be\+Deleted)
+\item 
+int \hyperlink{balanced_tree_a_p_i_8h_a59f1af69a351e89867db66987a0666e0}{tree\+Is\+Empty} (\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$the\+Tree)
+\item 
+int \hyperlink{balanced_tree_a_p_i_8h_aff810699a02179aeabe9d5ab799dc766}{tree\+Has\+Two\+Children} (\hyperlink{struct_balanced_bin_tree_node}{Tree\+Node} $\ast$root)
+\item 
+void $\ast$ \hyperlink{balanced_tree_a_p_i_8h_acccfb57183ab643ecb0f4a22f33d9b65}{tree\+Find\+Node} (\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$the\+Tree, void $\ast$\hyperlink{structdata}{data})
+\item 
+void $\ast$ \hyperlink{balanced_tree_a_p_i_8h_a3bdbbebdedf6e4a4b782b79e8da849fe}{tree\+Find\+Min} (\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$the\+Tree)
+\item 
+void $\ast$ \hyperlink{balanced_tree_a_p_i_8h_aa60a5fd0f6e263bc2ad8be9a83675ce1}{tree\+Find\+Max} (\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$the\+Tree)
+\item 
+void \hyperlink{balanced_tree_a_p_i_8h_a46434e742f064d38f81b38924101ab2d}{tree\+In\+Order\+Print} (\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$the\+Tree, void($\ast$print\+Node\+FP)(void $\ast$\hyperlink{structdata}{data}))
+\item 
+void \hyperlink{balanced_tree_a_p_i_8h_a016871075d74c03a9a7a9e1a1b9b786c}{tree\+Pre\+Order\+Print} (\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$the\+Tree, void($\ast$print\+Node\+FP)(void $\ast$\hyperlink{structdata}{data}))
+\item 
+void \hyperlink{balanced_tree_a_p_i_8h_a6c42e5d760518c090eb6eb8b9bff62f8}{tree\+Post\+Order\+Print} (\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$the\+Tree, void($\ast$print\+Node\+FP)(void $\ast$\hyperlink{structdata}{data}))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing the functions that communicate with a self-\/balancing binary tree. 
+
+\begin{DoxyAuthor}{Author}
+Matthew Ajayi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+August 6th, 2017 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_a59969ddb13215584df2a0df9816b5dbb}\label{balanced_tree_a_p_i_8h_a59969ddb13215584df2a0df9816b5dbb}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!create\+Balanced\+Bin\+Node@{create\+Balanced\+Bin\+Node}}
+\index{create\+Balanced\+Bin\+Node@{create\+Balanced\+Bin\+Node}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{create\+Balanced\+Bin\+Node()}{createBalancedBinNode()}}
+{\footnotesize\ttfamily \hyperlink{struct_balanced_bin_tree_node}{Tree\+Node}$\ast$ create\+Balanced\+Bin\+Node (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+This function creates a tree node for a self-\/balancing binary tree. 
+\begin{DoxyParams}{Parameters}
+{\em data} & pointer to data that is to be added to a self-\/balancing binary tree. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_a54002b7e96754979d94eb4f3c5750328}\label{balanced_tree_a_p_i_8h_a54002b7e96754979d94eb4f3c5750328}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!create\+Balanced\+Bin\+Tree@{create\+Balanced\+Bin\+Tree}}
+\index{create\+Balanced\+Bin\+Tree@{create\+Balanced\+Bin\+Tree}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{create\+Balanced\+Bin\+Tree()}{createBalancedBinTree()}}
+{\footnotesize\ttfamily \hyperlink{struct_balanced_bin_tree}{Tree}$\ast$ create\+Balanced\+Bin\+Tree (\begin{DoxyParamCaption}\item[{int($\ast$)(void $\ast$data1, void $\ast$data2)}]{compare\+FP,  }\item[{void($\ast$)(void $\ast$to\+Be\+Deleted)}]{destroy\+FP,  }\item[{void $\ast$($\ast$)(void $\ast$to\+Be\+Copy)}]{copy\+FP }\end{DoxyParamCaption})}
+
+This function returns a pointer to a binary tree. You must send pointers to the compare and destroy functions when you create the tree. 
+\begin{DoxyParams}{Parameters}
+{\em compare\+FP} & function pointer to allow for comparison between two generic data types \\
+\hline
+{\em destroy\+FP} & function pointer to allow for pointer deletion. \\
+\hline
+{\em copy\+FP} & function pointer to a function that copies pointer data to a new pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If successful, returns a pointer to a binary tree. Returns null if the memory allocation fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_a9a025a7c00f1f53f29b6184c25fb998d}\label{balanced_tree_a_p_i_8h_a9a025a7c00f1f53f29b6184c25fb998d}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!destroy\+Balanced\+Bin\+Tree@{destroy\+Balanced\+Bin\+Tree}}
+\index{destroy\+Balanced\+Bin\+Tree@{destroy\+Balanced\+Bin\+Tree}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{destroy\+Balanced\+Bin\+Tree()}{destroyBalancedBinTree()}}
+{\footnotesize\ttfamily void destroy\+Balanced\+Bin\+Tree (\begin{DoxyParamCaption}\item[{\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$}]{to\+Be\+Deleted }\end{DoxyParamCaption})}
+
+This function destroys a binary tree and all data that is in the tree when destroy is called. 
+\begin{DoxyParams}{Parameters}
+{\em to\+Be\+Deleted} & pointer to binary tree created via create\+Balanced\+Bin\+Tree \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_ab764e3af4d144b174b5db3adfe63a2c9}\label{balanced_tree_a_p_i_8h_ab764e3af4d144b174b5db3adfe63a2c9}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!tree\+Delete\+Node@{tree\+Delete\+Node}}
+\index{tree\+Delete\+Node@{tree\+Delete\+Node}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{tree\+Delete\+Node()}{treeDeleteNode()}}
+{\footnotesize\ttfamily void tree\+Delete\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$}]{the\+Tree,  }\item[{void $\ast$}]{to\+Be\+Deleted }\end{DoxyParamCaption})}
+
+Function to delete a node from a self-\/balancing binary tree. 
+\begin{DoxyParams}{Parameters}
+{\em the\+Tree} & pointer to a self-\/balancing binary tree \\
+\hline
+{\em to\+Be\+Deleted} & pointer to generic data that is to be deleted from the self-\/balancing binary tree \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_aa60a5fd0f6e263bc2ad8be9a83675ce1}\label{balanced_tree_a_p_i_8h_aa60a5fd0f6e263bc2ad8be9a83675ce1}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!tree\+Find\+Max@{tree\+Find\+Max}}
+\index{tree\+Find\+Max@{tree\+Find\+Max}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{tree\+Find\+Max()}{treeFindMax()}}
+{\footnotesize\ttfamily void$\ast$ tree\+Find\+Max (\begin{DoxyParamCaption}\item[{\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$}]{the\+Tree }\end{DoxyParamCaption})}
+
+Function to return the largest value of a tree, dependant on the compare function pointer parameters. 
+\begin{DoxyParams}{Parameters}
+{\em the\+Tree} & pointer to a self-\/balancing binary tree\textquotesingle{}s root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the maximum value found. If tree is empty, return N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_a3bdbbebdedf6e4a4b782b79e8da849fe}\label{balanced_tree_a_p_i_8h_a3bdbbebdedf6e4a4b782b79e8da849fe}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!tree\+Find\+Min@{tree\+Find\+Min}}
+\index{tree\+Find\+Min@{tree\+Find\+Min}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{tree\+Find\+Min()}{treeFindMin()}}
+{\footnotesize\ttfamily void$\ast$ tree\+Find\+Min (\begin{DoxyParamCaption}\item[{\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$}]{the\+Tree }\end{DoxyParamCaption})}
+
+Function to return the smallest value of a tree, dependant on the compare function pointer parameters. 
+\begin{DoxyParams}{Parameters}
+{\em the\+Tree} & pointer to a self-\/balancing binary tree\textquotesingle{}s root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the min found. If tree is empty, return N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_acccfb57183ab643ecb0f4a22f33d9b65}\label{balanced_tree_a_p_i_8h_acccfb57183ab643ecb0f4a22f33d9b65}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!tree\+Find\+Node@{tree\+Find\+Node}}
+\index{tree\+Find\+Node@{tree\+Find\+Node}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{tree\+Find\+Node()}{treeFindNode()}}
+{\footnotesize\ttfamily void$\ast$ tree\+Find\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$}]{the\+Tree,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Function to return a given value in the tree, dependant on the compare function pointer parameters. Compares nodes, until compare function returns zero, or the tree is exhausted. 
+\begin{DoxyParams}{Parameters}
+{\em the\+Tree} & pointer to a self-\/balancing binary tree\textquotesingle{}s root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the data found. If tree is empty or data is not found, return N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_aff810699a02179aeabe9d5ab799dc766}\label{balanced_tree_a_p_i_8h_aff810699a02179aeabe9d5ab799dc766}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!tree\+Has\+Two\+Children@{tree\+Has\+Two\+Children}}
+\index{tree\+Has\+Two\+Children@{tree\+Has\+Two\+Children}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{tree\+Has\+Two\+Children()}{treeHasTwoChildren()}}
+{\footnotesize\ttfamily int tree\+Has\+Two\+Children (\begin{DoxyParamCaption}\item[{\hyperlink{struct_balanced_bin_tree_node}{Tree\+Node} $\ast$}]{root }\end{DoxyParamCaption})}
+
+Function to determine if a binary tree node has two children. 
+\begin{DoxyParams}{Parameters}
+{\em root} & pointer to a self-\/balancing binary tree\textquotesingle{}s root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If tree is empty, or does not exist, return 1. Otherwise, return 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_a46434e742f064d38f81b38924101ab2d}\label{balanced_tree_a_p_i_8h_a46434e742f064d38f81b38924101ab2d}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!tree\+In\+Order\+Print@{tree\+In\+Order\+Print}}
+\index{tree\+In\+Order\+Print@{tree\+In\+Order\+Print}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{tree\+In\+Order\+Print()}{treeInOrderPrint()}}
+{\footnotesize\ttfamily void tree\+In\+Order\+Print (\begin{DoxyParamCaption}\item[{\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$}]{the\+Tree,  }\item[{void($\ast$)(void $\ast$\hyperlink{structdata}{data})}]{print\+Node\+FP }\end{DoxyParamCaption})}
+
+function to print a tree in-\/order. EG A / \textbackslash{} B C / \textbackslash{} / \textbackslash{} D F G E would print nodes thusly\+: D-\/$>$B-\/$>$F-\/$>$A-\/$>$G-\/$>$C-\/$>$E 
+\begin{DoxyParams}{Parameters}
+{\em the\+Tree} & pointer to a self-\/balancing binary tree \\
+\hline
+{\em print\+Node\+FP} & pointer to a function to print void pointer data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_a8c90b112e2f12ffb017e386f92b69ac3}\label{balanced_tree_a_p_i_8h_a8c90b112e2f12ffb017e386f92b69ac3}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!tree\+Insert\+Node@{tree\+Insert\+Node}}
+\index{tree\+Insert\+Node@{tree\+Insert\+Node}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{tree\+Insert\+Node()}{treeInsertNode()}}
+{\footnotesize\ttfamily void tree\+Insert\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$}]{the\+Tree,  }\item[{void $\ast$}]{to\+Be\+Inserted }\end{DoxyParamCaption})}
+
+Function to insert a node into a self-\/balancing binary tree. 
+\begin{DoxyParams}{Parameters}
+{\em the\+Tree} & pointer to a self-\/balancing binary tree \\
+\hline
+{\em to\+Be\+Inserted} & pointer to generic data that is to be inserted into the self-\/balancing binary tree \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_a59f1af69a351e89867db66987a0666e0}\label{balanced_tree_a_p_i_8h_a59f1af69a351e89867db66987a0666e0}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!tree\+Is\+Empty@{tree\+Is\+Empty}}
+\index{tree\+Is\+Empty@{tree\+Is\+Empty}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{tree\+Is\+Empty()}{treeIsEmpty()}}
+{\footnotesize\ttfamily int tree\+Is\+Empty (\begin{DoxyParamCaption}\item[{\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$}]{the\+Tree }\end{DoxyParamCaption})}
+
+Function to determine if a binary tree is empty. 
+\begin{DoxyParams}{Parameters}
+{\em the\+Tree} & pointer to a self-\/balancing binary tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If tree is empty, return 1. Otherwise, return 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_a6c42e5d760518c090eb6eb8b9bff62f8}\label{balanced_tree_a_p_i_8h_a6c42e5d760518c090eb6eb8b9bff62f8}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!tree\+Post\+Order\+Print@{tree\+Post\+Order\+Print}}
+\index{tree\+Post\+Order\+Print@{tree\+Post\+Order\+Print}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{tree\+Post\+Order\+Print()}{treePostOrderPrint()}}
+{\footnotesize\ttfamily void tree\+Post\+Order\+Print (\begin{DoxyParamCaption}\item[{\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$}]{the\+Tree,  }\item[{void($\ast$)(void $\ast$\hyperlink{structdata}{data})}]{print\+Node\+FP }\end{DoxyParamCaption})}
+
+Function to print a tree in post-\/order. EG A / \textbackslash{} B C / \textbackslash{} / \textbackslash{} D F G E would print nodes thusly\+: D-\/$>$F-\/$>$B-\/$>$G-\/$>$C-\/$>$E-\/$>$A 
+\begin{DoxyParams}{Parameters}
+{\em the\+Tree} & pointer to a self-\/balancing binary tree\textquotesingle{}s root \\
+\hline
+{\em print\+Node\+FP} & pointer to a function to print void pointer data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{balanced_tree_a_p_i_8h_a016871075d74c03a9a7a9e1a1b9b786c}\label{balanced_tree_a_p_i_8h_a016871075d74c03a9a7a9e1a1b9b786c}} 
+\index{balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}!tree\+Pre\+Order\+Print@{tree\+Pre\+Order\+Print}}
+\index{tree\+Pre\+Order\+Print@{tree\+Pre\+Order\+Print}!balanced\+Tree\+A\+P\+I.\+h@{balanced\+Tree\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{tree\+Pre\+Order\+Print()}{treePreOrderPrint()}}
+{\footnotesize\ttfamily void tree\+Pre\+Order\+Print (\begin{DoxyParamCaption}\item[{\hyperlink{struct_balanced_bin_tree}{Tree} $\ast$}]{the\+Tree,  }\item[{void($\ast$)(void $\ast$\hyperlink{structdata}{data})}]{print\+Node\+FP }\end{DoxyParamCaption})}
+
+Function to print a tree pre-\/order. EG A / \textbackslash{} B C / \textbackslash{} / \textbackslash{} D F G E would print nodes thusly\+: A-\/$>$B-\/$>$D-\/$>$F-\/$>$C-\/$>$G-\/$>$E 
+\begin{DoxyParams}{Parameters}
+{\em the\+Tree} & pointer to a self-\/balancing binary tree \\
+\hline
+{\em print\+Node\+FP} & pointer to a function to print void pointer data. \\
+\hline
+\end{DoxyParams}

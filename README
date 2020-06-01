@@ -1,0 +1,19 @@
+*************************************************************
+Matthew Ajayi		Point of Sale System using tree algorithms
+*************************************************************
+
+*******************
+Compilation
+*******************
+
+The commandline used to compile the program is gcc -Wall -std=c99 -pedantic -g src/main.c src/tree.c src/posSystem.c -Iinclude -o bin/runMe. Or use the Makefile. I chose addition 3 (Allowing customers to edit their invoice).
+
+********************
+Running the program
+********************
+To run the program use make Makefile to get an executable and run the executable ./bin/runMe assets/Games.csv
+
+********************
+Complexity
+********************
+The complexity for search, insertion, deletion is O(log n) where n is the number of nodes in the tree prior to the operation. Since the time complexity is O(log n)  each adjustment take time O(1), therefore total time for insertion or deletion, including adjustments, is O(log N).

@@ -1,0 +1,22 @@
+\hypertarget{struct_balanced_bin_tree}{}\section{Balanced\+Bin\+Tree Struct Reference}
+\label{struct_balanced_bin_tree}\index{Balanced\+Bin\+Tree@{Balanced\+Bin\+Tree}}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_balanced_bin_tree_a674753c8a07be3804c510c5a2a6e4aa6}\label{struct_balanced_bin_tree_a674753c8a07be3804c510c5a2a6e4aa6}} 
+\hyperlink{struct_balanced_bin_tree_node}{Tree\+Node} $\ast$ \hyperlink{struct_balanced_bin_tree_a674753c8a07be3804c510c5a2a6e4aa6}{root}
+\begin{DoxyCompactList}\small\item\em pointer to generic data that is to be stored in the tree \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_balanced_bin_tree_a37dfa16f7cf2e5877b3270c7274b40d0}\label{struct_balanced_bin_tree_a37dfa16f7cf2e5877b3270c7274b40d0}} 
+int($\ast$ \hyperlink{struct_balanced_bin_tree_a37dfa16f7cf2e5877b3270c7274b40d0}{compare\+FP} )(void $\ast$data1, void $\ast$data2)
+\begin{DoxyCompactList}\small\item\em function pointer to a comparison function for the purpose of inserting and deleting elements \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_balanced_bin_tree_a39c48eca2f84ba1988b6bf44bee50fbf}\label{struct_balanced_bin_tree_a39c48eca2f84ba1988b6bf44bee50fbf}} 
+void($\ast$ \hyperlink{struct_balanced_bin_tree_a39c48eca2f84ba1988b6bf44bee50fbf}{destroy\+FP} )(void $\ast$\hyperlink{structdata}{data})
+\begin{DoxyCompactList}\small\item\em function pointer to a function to free a single pointer that is deleted from the tree \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_balanced_bin_tree_a2d80391a6034372b053b6a3950c3af6e}\label{struct_balanced_bin_tree_a2d80391a6034372b053b6a3950c3af6e}} 
+void $\ast$($\ast$ \hyperlink{struct_balanced_bin_tree_a2d80391a6034372b053b6a3950c3af6e}{copy\+FP} )(void $\ast$to\+Be\+Copy)
+\begin{DoxyCompactList}\small\item\em function pointer to a function that copies pointer data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/tree.\+h\end{DoxyCompactItemize}
